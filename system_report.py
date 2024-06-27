@@ -8,7 +8,7 @@ def get_ps_aux_output():
         result = subprocess.run(['ps', 'aux'], stdout=subprocess.PIPE, text=True, check=True)
         return result.stdout
     except FileNotFoundError as e:
-        print("Ошибка: команда 'ps' не найдена")
+        print("Ошибка: команда 'ps' не найдена ")
         raise e
     except subprocess.CalledProcessError as e:
         print("Ошибка при выполнении команды 'ps aux'")
